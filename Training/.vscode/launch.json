@@ -1,0 +1,70 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "test3",
+            "request": "launch",
+            "mainClass": "test3",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "threads",
+            "request": "launch",
+            "mainClass": "threads",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "Roman",
+            "request": "launch",
+            "mainClass": "Roman",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "extend",
+            "request": "launch",
+            "mainClass": "extend",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "abc",
+            "request": "launch",
+            "mainClass": "abc",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "Example",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "test1",
+            "request": "launch",
+            "mainClass": "test1",
+            "projectName": "Training_370cc96b"
+        },
+        {
+            "type": "java",
+            "name": "test2",
+            "request": "launch",
+            "mainClass": "test2",
+            "projectName": "Training_370cc96b"
+        }
+    ]
+}
