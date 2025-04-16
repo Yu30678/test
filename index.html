@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>網站目錄</title>
+<meta charset="UTF-8">
+<title>網站目錄</title>
+<style>
+  body {
+    background-color: lightyellow;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-link {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 25px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .button-link:hover {
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
+</style>
 </head>
 <body>
-    <h1>網站目錄</h1>
-    <ul>
-        <li><a href="test.html">自我簡介</a></li>
-        <li><a href="testchat.html">聊天室</a></li>
-        <li><a href="littlegame.html">小遊戲1</a></li>
-        <li><a href="video.html">看影片</a></li>
-    </ul>
+<h1>網站目錄</h1>
+<ul class="nav-list">
+  <li><a href="test.html" class="button-link">自我簡介</a></li>
+  <li><a href="testchat.html" class="button-link">聊天室</a></li>
+  <li><a href="littlegame.html" class="button-link">小遊戲1</a></li>
+  <li><a href="video.html" class="button-link">看影片</a></li>
+</ul>
 </body>
 </html>
