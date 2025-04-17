@@ -1,14 +1,156 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChangYU INFO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary: #2b2d42;
+            --secondary: #8d99ae;
+            --accent: #ef233c;
+            --light: #edf2f4;
+            --dark: #1a1a2e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 60px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+        
+        h2 {
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 3px;
+            width: 100%;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            padding: 8px 15px;
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .home-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+            color: var(--accent);
+        }
+        
+        .home-icon {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
 <body>
-    <h1>白宮聲明稿</h1>
-    <h2>川普：</h2>
-    <p>關於這次關稅的問題，在發布後我自己也嚇了一跳
-       我不知道會這麼嚴重，我只是想嚇嚇大家還有順便賺一點錢
-       嘻嘻
-    </p>
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home home-icon"></i> 回首頁
+    </a>
+
+    <div class="container">
+        <h1>白宮聲明稿</h1>
+        <h2>川普：</h2>
+        <p>關於這次關稅的問題，在發布後我自己也嚇了一跳。
+           我不知道會這麼嚴重，我只是想嚇嚇大家還有順便賺一點錢。
+           嘻嘻
+        </p>
+    </div>
 </body>
 </html>
