@@ -2,53 +2,166 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My First Website</title>
 <style>
-body {
-background-color: lightyellow;
-text-align: center;
-font-family: Arial, sans-serif;
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
- }
-h1 {
-margin-bottom: 30px;
- }
-.nav-list {
-list-style-type: none;
-padding: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
- }
-.button-link {
-display: inline-block;
-margin: 8px;
-padding: 12px 25px;
-width: 200px;
-background-color: white;
-color: black;
-text-decoration: none;
-border: 2px solid #333;
-border-radius: 5px;
-font-size: 16px;
-transition: all 0.3s;
- }
-.button-link:hover {
-background-color: 
-#f0f0f0;
-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
- }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  
+  :root {
+    --primary: #2b2d42;
+    --secondary: #8d99ae;
+    --accent: #ef233c;
+    --light: #edf2f4;
+    --dark: #1a1a2e;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--light);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 60px;
+    background-color: var(--accent);
+    border-radius: 2px;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .button-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: white;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent);
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+  
+  .button-link:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+  }
+  
+  .button-link:hover::before {
+    width: 100%;
+  }
+  
+  .button-link:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  @media (max-width: 600px) {
+    .nav-list {
+      grid-template-columns: 1fr;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
 <body>
-<h1>My First Website</h1>
-<ul class="nav-list">
-<li><a href="test.html" class="button-link">自我簡介</a></li>
-<li><a href="testchat.html" class="button-link">聊天室</a></li>
-<li><a href="littlegame.html" class="button-link">小遊戲1</a></li>
-<li><a href="video.html" class="button-link">看影片</a></li>
-</ul>
+  <div class="container">
+    <h1>My First Website</h1>
+    <ul class="nav-list">
+      <li>
+        <a href="test.html" class="button-link">
+          <i class="fas fa-user icon"></i>自我簡介
+        </a>
+      </li>
+      <li>
+        <a href="testchat.html" class="button-link">
+          <i class="fas fa-comments icon"></i>聊天室
+        </a>
+      </li>
+      <li>
+        <a href="littlegame.html" class="button-link">
+          <i class="fas fa-gamepad icon"></i>小遊戲1
+        </a>
+      </li>
+      <li>
+        <a href="video.html" class="button-link">
+          <i class="fas fa-play-circle icon"></i>看影片
+        </a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
